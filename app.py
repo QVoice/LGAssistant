@@ -24,7 +24,7 @@ def webhook():
 
     #res = processRequest(req)
     speech = "Battery is running out mostly when you are playing games. Plus, turning  off your GPS  when it is not in use may help."
-    rest = {
+    res = {
         "speech": speech,
         "displayText": speech,
         # "data": data,
