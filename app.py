@@ -37,7 +37,7 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
 
-    sendFCM()
+    # sendFCM()
 
     return r
 
