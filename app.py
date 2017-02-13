@@ -36,7 +36,28 @@ def webhook():
     # print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
+
+    sendFCM();
+
     return r
+
+
+def sendFCM():
+    url = 'https://fcm.googleapis.com/fcm/send'
+    body = {
+        "data":{
+            "title":"mytitle",
+            "body":"mybody",
+            "url":"myurl"
+        },
+        "to":"device_id_here" {
+    	    "etVurr3a2gU:APA91bG29YuKdADgWclj8XN-xdmwG7oi7zHflBNrukmSYlZfoH8nTMLoTPBnnVoCXuxxLmpfcoYNILgyZKGugBcyeoAw9GXg4rG7NcapE-3oEPfbNx3uF5yqVdD4hO1rmcSyRrg6Ufe8",
+    	    "fqfSBcsFu7A:APA91bH8Ob2tgbirkUBAjPSwF4kZJGto5fFMousw8hRWo6AkutpIkFLauecEzSNUDtJoug92RJ7D1bVcq32rX5sWiIIKvNQwgZHswU2xIrYlsAS8BHrBQSvPuJVaV0117tqRwBn0dq1z"
+        }
+
+    headers = {"Content-Type":"application/json", "Authorization": "key=api_key_here"}
+    requests.post(url, data=json.dumps(body), headers=headers)
+    return;
 
 
 def processRequest(req):
