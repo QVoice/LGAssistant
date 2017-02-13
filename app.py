@@ -49,9 +49,14 @@ def sendFCM():
         "data":{
             "title":"mytitle",
             "body":"mybody",
-            "url":"myurl"
+            # "url":"myurl"
         },
-        "to": "etVurr3a2gU:APA91bG29YuKdADgWclj8XN-xdmwG7oi7zHflBNrukmSYlZfoH8nTMLoTPBnnVoCXuxxLmpfcoYNILgyZKGugBcyeoAw9GXg4rG7NcapE-3oEPfbNx3uF5yqVdD4hO1rmcSyRrg6Ufe8", "fqfSBcsFu7A:APA91bH8Ob2tgbirkUBAjPSwF4kZJGto5fFMousw8hRWo6AkutpIkFLauecEzSNUDtJoug92RJ7D1bVcq32rX5sWiIIKvNQwgZHswU2xIrYlsAS8BHrBQSvPuJVaV0117tqRwBn0dq1z"
+        "notification":{
+            "title":"Test title",
+            "body":"Test body",
+            "content_available": "true"
+        },
+        "to": "fqfSBcsFu7A:APA91bH8Ob2tgbirkUBAjPSwF4kZJGto5fFMousw8hRWo6AkutpIkFLauecEzSNUDtJoug92RJ7D1bVcq32rX5sWiIIKvNQwgZHswU2xIrYlsAS8BHrBQSvPuJVaV0117tqRwBn0dq1z"
     }
 
     headers = {"Content-Type":"application/json", "Authorization": "key=AAAAPll10tw:APA91bFgF4IU5k7V4-YBEphx9k7y7z0pqyhGcnN3Qbk8Wjuglftq8MzBa_ST75j4HSNh0YaonJov0BtTtq_85i8ao0Fm92JlDit96xLY5UJiC_OVwfFNvpYJnFU5FRYA7M8O20i2ahEi"}
