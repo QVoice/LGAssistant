@@ -6,6 +6,7 @@ standard_library.install_aliases()
 import urllib.request, urllib.parse, urllib.error
 import json
 import os
+import requests
 
 from flask import Flask
 from flask import request
@@ -37,7 +38,7 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
 
-    # sendFCM()
+    sendFCM()
 
     return r
 
