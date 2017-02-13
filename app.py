@@ -29,7 +29,7 @@ def webhook():
         "displayText": speech,
         # "data": data,
         # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
+        "source": "lg-assistant"
     }
 
     res = json.dumps(res, indent=4)
@@ -37,7 +37,7 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
 
-    sendFCM();
+    sendFCM()
 
     return r
 
@@ -55,7 +55,7 @@ def sendFCM():
 
     headers = {"Content-Type":"application/json", "Authorization": "key=AAAAPll10tw:APA91bFgF4IU5k7V4-YBEphx9k7y7z0pqyhGcnN3Qbk8Wjuglftq8MzBa_ST75j4HSNh0YaonJov0BtTtq_85i8ao0Fm92JlDit96xLY5UJiC_OVwfFNvpYJnFU5FRYA7M8O20i2ahEi"}
     requests.post(url, data=json.dumps(body), headers=headers)
-    return;
+    return {}
 
 
 def processRequest(req):
