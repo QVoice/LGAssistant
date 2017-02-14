@@ -34,6 +34,8 @@ def sendFCM():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    sendFCM()
+    
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
@@ -53,9 +55,6 @@ def webhook():
     # print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
-
-    sendFCM()
-
     return r
 
 def processRequest(req):
