@@ -42,17 +42,13 @@ def sendNoti():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    #sendFCM()
-    #sendNoti()
-    
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = processRequest(req)
+    #res = processRequest(req)
 
-    """
     speech = "Battery is running out mostly when you are playing games. Plus, turning  off your GPS  when it is not in use may help."
     res = {
         "speech": speech,
@@ -61,7 +57,6 @@ def webhook():
         # "contextOut": [],
         "source": "lg-assistant"
     }
-    """
 
     res = json.dumps(res, indent=4)
     # print(res)
