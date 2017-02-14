@@ -29,6 +29,7 @@ def sendFCM():
 
     headers = {"Content-Type":"application/json", "Authorization":"key=AAAAPll10tw:APA91bFgF4IU5k7V4-YBEphx9k7y7z0pqyhGcnN3Qbk8Wjuglftq8MzBa_ST75j4HSNh0YaonJov0BtTtq_85i8ao0Fm92JlDit96xLY5UJiC_OVwfFNvpYJnFU5FRYA7M8O20i2ahEi"}
     r = requests.post(url, data=json.dumps(body), headers=headers)
+    print("sendFCM result:")
     print(r)
     return r
 
