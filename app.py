@@ -14,8 +14,6 @@ from flask import make_response
 
 from pyfcm import FCMNotification
 
-print("__name__ is " + __name__)
-
 # Flask app should start in global layout
 app = Flask(__name__)
 
@@ -45,7 +43,7 @@ def sendNoti():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     #sendFCM()
-    sendNoti()
+    #sendNoti()
     
     req = request.get_json(silent=True, force=True)
 
@@ -137,4 +135,7 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=False, port=port, host='0.0.0.0')
+    sendNoti()
+    
+    #app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=True, port=port, host='https://lg-assistant.herokuapp.com')
