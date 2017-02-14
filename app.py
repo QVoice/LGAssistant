@@ -40,8 +40,17 @@ def sendNoti():
     print(result)
     return None
 
+def test():
+    URL = 'http://www.tistory.com'
+    response = requests.get(URL)
+    print('test status: ')
+    print(response.status_code)
+    return None
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    test()
+    
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
@@ -140,4 +149,4 @@ if __name__ == '__main__':
     print("Starting app on port %d" % port)
     
     app.run(debug=False, port=port, host='0.0.0.0')
-    #app.run(debug=True, port=port, host='0.0.0.0') 
+
