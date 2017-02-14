@@ -49,8 +49,8 @@ def test():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    test()
-    
+    sendFCM()
+
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
