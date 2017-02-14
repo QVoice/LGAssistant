@@ -50,7 +50,7 @@ def test():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    sendFCM()
+    sendNoti()
 
     req = request.get_json(silent=True, force=True)
 
