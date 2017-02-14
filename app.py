@@ -123,7 +123,7 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
 
-    speech = "__TODAY__ in " + location.get('city') + ": " + condition.get('text') + \
+    speech = "Today in " + location.get('city') + ": " + condition.get('text') + \
              ", the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
     print("Response:")
@@ -134,7 +134,8 @@ def makeWebhookResult(data):
         "displayText": speech,
         # "data": data,
         # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
+        #"source": "apiai-weather-webhook-sample"
+        "source": "lg-assistant"
     }
 
 
@@ -143,5 +144,5 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
     
-    #app.run(debug=False, port=port, host='0.0.0.0')
-    app.run(debug=True, port=port, host='0.0.0.0') 
+    app.run(debug=False, port=port, host='0.0.0.0')
+    #app.run(debug=True, port=port, host='0.0.0.0') 
