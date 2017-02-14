@@ -55,7 +55,7 @@ def webhook():
         "displayText": speech,
         # "data": data,
         # "contextOut": [],
-        "source": "lg-assistant"
+        "source": "LGAssistant"
     }
 
     res = json.dumps(res, indent=4)
