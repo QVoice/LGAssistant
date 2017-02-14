@@ -14,6 +14,8 @@ from flask import make_response
 
 from pyfcm import FCMNotification
 
+print("__name__ is " + __name__)
+
 # Flask app should start in global layout
 app = Flask(__name__)
 
