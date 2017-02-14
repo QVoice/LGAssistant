@@ -50,7 +50,9 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    #res = processRequest(req)
+    res = processRequest(req)
+
+    """
     speech = "Battery is running out mostly when you are playing games. Plus, turning  off your GPS  when it is not in use may help."
     res = {
         "speech": speech,
@@ -59,6 +61,7 @@ def webhook():
         # "contextOut": [],
         "source": "lg-assistant"
     }
+    """
 
     res = json.dumps(res, indent=4)
     # print(res)
@@ -67,7 +70,8 @@ def webhook():
     return r
 
 def processRequest(req):
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    #if req.get("result").get("action") != "yahooWeatherForecast":
+    if req.get("result").get("action") != "smartdoctor.battery":
         return {}
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = makeYqlQuery(req)
@@ -134,7 +138,6 @@ if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
     print("Starting app on port %d" % port)
-
-    sendNoti()
     
-    app.run(debug=False, port=port, host='0.0.0.0')
+    #app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=True, port=port, host='0.0.0.0')
