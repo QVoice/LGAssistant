@@ -137,5 +137,4 @@ if __name__ == '__main__':
 
     sendNoti()
     
-    #app.run(debug=False, port=port, host='0.0.0.0')
-    app.run(debug=True, port=port, host='https://lg-assistant.herokuapp.com')
+    app.run(debug=False, port=port, host='0.0.0.0')
