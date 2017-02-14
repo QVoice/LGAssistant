@@ -3,5 +3,5 @@
   "description": "API.AI webhook for LGAssistant",
   "repository": "https://github.com/QVoice/LGAssitant",
   "logo": "http://xvir.github.io/img/apiai.png",
-  "keywords": ["api.ai", "natural language", "LG Assitant"]
+  "keywords": ["api.ai", "natural language", "LG Assistant"]
 }
