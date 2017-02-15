@@ -23,10 +23,10 @@ def sendFCM():
             "body":"mybody"
         },
        # This token is for dexter
-       #"to": "fqfSBcsFu7A:APA91bH8Ob2tgbirkUBAjPSwF4kZJGto5fFMousw8hRWo6AkutpIkFLauecEzSNUDtJoug92RJ7D1bVcq32rX5sWiIIKvNQwgZHswU2xIrYlsAS8BHrBQSvPuJVaV0117tqRwBn0dq1z"
+       "to": "fqfSBcsFu7A:APA91bH8Ob2tgbirkUBAjPSwF4kZJGto5fFMousw8hRWo6AkutpIkFLauecEzSNUDtJoug92RJ7D1bVcq32rX5sWiIIKvNQwgZHswU2xIrYlsAS8BHrBQSvPuJVaV0117tqRwBn0dq1z"
        
         # This token is for SR KIM  
-        "to": "ehZKwg3yvFM:APA91bEmmVsGaVxDVR9QjWqLEf2PCLXtWCohi7wIvuTkyNR3BJphWk5qpVBfw93an22cOYidTuzzWyhZyOhr_HCMPwKBI98SM36aaLc_P80SyD_rArGrSyKKTLO14fsTmTLZzCnUI9HW"
+       #"to": "ehZKwg3yvFM:APA91bEmmVsGaVxDVR9QjWqLEf2PCLXtWCohi7wIvuTkyNR3BJphWk5qpVBfw93an22cOYidTuzzWyhZyOhr_HCMPwKBI98SM36aaLc_P80SyD_rArGrSyKKTLO14fsTmTLZzCnUI9HW"
     }
 
     headers = {"Content-Type":"application/json", "Authorization":"key=AAAAPll10tw:APA91bFgF4IU5k7V4-YBEphx9k7y7z0pqyhGcnN3Qbk8Wjuglftq8MzBa_ST75j4HSNh0YaonJov0BtTtq_85i8ao0Fm92JlDit96xLY5UJiC_OVwfFNvpYJnFU5FRYA7M8O20i2ahEi"}
